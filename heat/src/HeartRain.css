@@ -1,0 +1,32 @@
+/* Khung chứa hiệu ứng phủ toàn màn hình */
+.heart-rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Tránh cản trở việc click vào các phần tử bên dưới */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Định dạng từng trái tim */
+.heart {
+  position: absolute;
+  top: -40px;
+  user-select: none;
+  animation: fall linear forwards;
+}
+
+/* Hiệu ứng rơi từ trên xuống dưới */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(50vh) rotate(180deg); /* Xoay nhẹ khi rơi */
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg);
+  }
+}
