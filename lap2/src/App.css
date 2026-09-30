@@ -1,0 +1,462 @@
+/* =====================================
+   GENERAL
+===================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f8f9fa;
+}
+
+.pizza-page {
+  min-height: 100vh;
+}
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar-custom {
+  background-color: #212529 !important;
+
+  padding: 15px 0;
+}
+
+.logo {
+  color: white !important;
+
+  font-size: 24px !important;
+
+  font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+  color: white !important;
+
+  font-size: 16px;
+
+  margin-left: 20px;
+
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+
+  color: white;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+
+  background-position: center;
+
+  padding: 60px 0;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+
+  line-height: 1.6;
+
+  margin-bottom: 30px;
+}
+
+.btn-order {
+  background-color: #dc3545 !important;
+
+  border-color: #dc3545 !important;
+
+  padding: 12px 25px;
+
+  font-size: 17px;
+
+  font-weight: bold;
+}
+
+.btn-order:hover {
+  background-color: #bb2d3b !important;
+
+  border-color: #bb2d3b !important;
+}
+
+
+/* =====================================
+   PIZZA ICON
+===================================== */
+
+.pizza-icon {
+  font-size: 180px;
+
+  animation: pizzaRotate 8s linear infinite;
+}
+
+@keyframes pizzaRotate {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =====================================
+   MENU
+===================================== */
+
+.menu-section {
+  background-color: #f8f9fa;
+
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  color: #212529;
+
+  font-size: 36px;
+
+  font-weight: bold;
+}
+
+.section-title p {
+  color: #777;
+
+  font-size: 17px;
+}
+
+
+/* =====================================
+   PIZZA CARD
+===================================== */
+
+.pizza-card {
+  height: 100%;
+
+  border: none !important;
+
+  border-radius: 12px !important;
+
+  overflow: hidden;
+
+  background-color: white !important;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+.pizza-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   PIZZA IMAGE
+===================================== */
+
+.pizza-image-box {
+  position: relative;
+
+  width: 100%;
+}
+
+.pizza-image {
+  width: 100%;
+
+  height: 230px;
+
+  object-fit: cover;
+
+  border-radius: 0 !important;
+}
+
+
+/* =====================================
+   SALE
+===================================== */
+
+.sale-badge {
+  position: absolute;
+
+  top: 10px;
+
+  left: 10px;
+
+  background-color: #ffc107;
+
+  color: #111;
+
+  padding: 5px 10px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  border-radius: 3px;
+}
+
+
+/* =====================================
+   CARD CONTENT
+===================================== */
+
+.pizza-card .card-body {
+  padding: 20px;
+}
+
+.pizza-name {
+  color: #212529;
+
+  font-size: 22px !important;
+
+  font-weight: bold;
+
+  margin-bottom: 12px;
+}
+
+.description {
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  min-height: 70px;
+}
+
+
+/* =====================================
+   CARD BOTTOM
+===================================== */
+
+.card-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.price {
+  color: #dc3545;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.order-button {
+  background-color: #dc3545 !important;
+
+  border-color: #dc3545 !important;
+
+  padding: 8px 16px;
+
+  font-weight: bold;
+}
+
+.order-button:hover {
+  background-color: #bb2d3b !important;
+
+  border-color: #bb2d3b !important;
+}
+
+
+/* =====================================
+   PROMOTION
+===================================== */
+
+.promotion {
+  background-color: #dc3545;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 60px 0;
+}
+
+.promotion h2 {
+  font-size: 36px;
+
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+.promotion p {
+  font-size: 20px;
+
+  margin-bottom: 25px;
+}
+
+.promotion-button {
+  background-color: white !important;
+
+  border-color: white !important;
+
+  color: #dc3545 !important;
+
+  padding: 12px 25px;
+
+  font-weight: bold;
+}
+
+.promotion-button:hover {
+  background-color: #f8f9fa !important;
+
+  border-color: #f8f9fa !important;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+  background-color: #212529;
+
+  color: white;
+
+  padding: 50px 0 20px;
+}
+
+.footer h4 {
+  font-size: 20px;
+
+  font-weight: bold;
+
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #ccc;
+
+  margin-bottom: 8px;
+}
+
+.footer hr {
+  border-color: #555;
+
+  margin-top: 20px;
+}
+
+.copyright {
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 991px) {
+
+  .navbar-custom .nav-link {
+    margin-left: 0;
+
+    margin-top: 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .pizza-icon {
+    font-size: 130px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 767px) {
+
+  .hero {
+    text-align: center;
+
+    padding: 50px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 35px;
+  }
+
+  .hero-text p {
+    font-size: 17px;
+  }
+
+  .pizza-icon {
+    font-size: 100px;
+
+    margin-top: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .promotion h2 {
+    font-size: 28px;
+  }
+
+}
